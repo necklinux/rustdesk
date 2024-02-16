@@ -558,7 +558,7 @@ def main():
                 #     'mv target/release/bundle/deb/rustdesk*.deb ./flutter/rustdesk.deb')
                 build_flutter_deb(version, features)
         else:
-            system2('cargo bundle --release --features ' + features)
+            system2('cargo build --release --features ' + features)
             if osx:
                 system2(
                     'strip target/release/bundle/osx/RustDesk.app/Contents/MacOS/rustdesk')
